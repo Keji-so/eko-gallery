@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(../font/proxima.otf);
+}
+
+.footer {
+  background: #1B1B1B;
+  color: #FAFAFA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2% 4%;
+}
+
+@media (max-width: 600px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer .left {
+  width: 50%;
+}
+
+.footer .left .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3% 0;
+  padding-right: 5%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer .left .top .side .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 12px;
+  font-family: 'Proxima Nova';
+  font-weight: light;
+}
+
+@media (max-width: 600px) {
+  .footer .left .top .side .logo {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+
+.footer .left .top .side .center {
+  margin: 20px 0;
+}
+
+.footer .left .top .side .option {
+  opacity: 0.6;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer .left .top .side .option:hover {
+  opacity: 1;
+}
+
+.footer .left .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .left .bottom .text {
+  font-family: 'Proxima Nova';
+  opacity: 0.8;
+}
+
+.footer .left .bottom .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.footer .right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1% 0;
+}
+
+.footer .right .icon {
+  font-size: 24px;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer .right .icon:hover {
+  opacity: 1;
+}
+
+.footer .right .center {
+  margin: 0 10%;
+}
+/*# sourceMappingURL=footer.css.map */

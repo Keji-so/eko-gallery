@@ -1,0 +1,102 @@
+@import '../mixins.scss';
+
+@font-face {
+    font-family:'Proxima Nova';
+     src: url(../font/proxima.otf);
+    }
+
+
+.footer {
+    background: #1B1B1B;
+    color: #FAFAFA;
+    display: flex;
+    padding: 2% 4%;
+
+    @include bp(mobile) {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 50%;
+        
+        .top {
+            display: flex;
+            padding: 3% 0;
+            padding-right: 5%;
+            justify-content: space-between;
+
+            .side {
+
+                .logo {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color:#ffffff;
+                    border: 1px solid #ffffff;
+                    padding: 12px;
+                    font-family:'Proxima Nova';
+                    font-weight: light;
+
+                    @include bp(mobile) {
+                        font-size: 12px;
+                        padding: 10px;
+                    }
+                }
+
+                .center {
+                    margin: 20px 0;
+                }
+
+                .option {
+                    opacity: 0.6;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        
+        .bottom {
+            display: flex;
+            font-size: 10px;
+            align-items: center;
+
+            .text {
+                font-family:'Proxima Nova';
+                opacity: 0.8;
+            }
+
+            .icon {
+                display: flex;
+                 align-self: center;
+            }
+        }
+    }
+
+    .right {
+        width: 50%;
+        display: flex;
+        padding: 1% 0;
+
+        .icon {
+            font-size: 24px;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+                &:hover {
+                    opacity: 1;
+                    } 
+        }
+
+        .center {
+            margin: 0 10%;
+            
+
+           
+        }
+    }
+}

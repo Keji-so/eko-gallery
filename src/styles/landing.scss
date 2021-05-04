@@ -1,0 +1,206 @@
+@import '../mixins.scss';
+
+@font-face {
+    font-family:'Proxima Nova';
+     src: url(../font/proxima.otf);
+    }
+
+.landing {
+    background: #1B1B1B;
+    display: flex;
+    color: #FAFAFA;
+
+    @include bp(mobile) {
+        flex-direction: column;
+    }
+
+
+    .left {
+        width: 40%;
+        padding: 2% 4%;
+
+      @include bp(mobile) {
+          width: 100%;
+          padding: 10%;
+      }
+
+
+        .eko-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:#ffffff;
+            border: 1px solid #ffffff;
+            padding: 12px;
+            width: 28%;
+            font-family:'Proxima Nova';
+            font-weight: light;
+
+            @include bp(mobile) {
+                font-size: 11px;
+                width: 30%;
+                padding: 10px 6px;
+            }
+        }
+
+        .welcome {
+            font-size: 42px;
+            line-height: 56px;
+            max-width: 100%;
+            margin-top: 35%;
+
+
+       @include bp(mobile) {
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: 20%;
+        
+       }
+
+        }
+
+        .landing-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #CFB53B;
+            width: 60%;
+            height: 8%;
+            margin-top: 10%;
+            cursor: pointer;
+
+            @include bp(mobile) {
+            padding: 5% 0;
+
+            }
+
+        
+
+            .arrow {
+                display: flex;
+                align-self: center;
+                font-size: 17px;
+            }
+
+            .visit {
+                font-family:'Proxima Nova';
+            }
+        }
+    }
+
+    .right {
+        width: 60%;
+
+        @include bp(mobile) {
+            width: 100%;
+        }
+
+        .top {
+
+            @include bp(mobile) {
+                display: none;
+            }
+
+            ul {
+               display: flex;
+               align-items: center; 
+               justify-content: space-between;
+               padding: 4%;
+               margin: 0 2%;
+
+               li {
+                list-style: none;
+                transition: all 0.3s ease;
+                cursor: pointer;
+
+                &:hover {
+                    color: #CFB53B;
+                }
+               }
+
+            }
+        }
+
+
+       .bottom {
+           padding: 0 5%;
+           padding-bottom: 5%;
+           display: grid;
+           grid-template-rows: 1fr 1fr;
+           grid-template-columns: 1fr 1fr;
+           grid-gap: 20px;
+
+
+           @include bp(mobile) {
+               height: 50vh;
+               width: 400vw;
+            display: flex;
+           }
+           
+
+           .pictures {
+               position: relative;
+               
+
+               @include bp(mobile) {
+                   width: 100%;
+                   height: 100%;
+                   
+               }
+
+               img {
+                
+
+                @include bp(mobile) {}
+                width: 100%;
+                height: 100%;
+                padding: 4%;
+               }
+
+               .pic4 {
+                
+               @include bp(mobile) {
+                position: absolute;
+                 top: 0;
+                 left: 0;
+             }
+            }
+
+
+               .pic1 {
+                position: absolute;
+                right: 0;
+
+                @include bp(mobile) {
+                    top: 0;
+                    left: 0;
+                }
+            }
+
+               .pic3 {
+                   position: absolute;
+                   right: 0;
+
+                   @include bp(mobile) {
+                    top: 0;
+                    left: 0;
+                }
+               }
+
+               .pic2 {
+                position: absolute;
+                bottom: 0;
+
+                @include bp(mobile) {
+                    top: 0;
+                    left: 0;
+                }
+            }
+           }
+       }
+
+       
+
+    
+    }
+}

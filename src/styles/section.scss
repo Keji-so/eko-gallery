@@ -1,0 +1,231 @@
+@import '../mixins.scss';
+
+@font-face {
+    font-family:'Proxima Nova';
+     src: url(../font/proxima.otf);
+    }
+
+.section {
+    
+
+.artwork {
+    padding: 2% 4%;
+    padding-bottom: 7%;
+
+    .section-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 0;
+
+    .heading {
+        font-size: 30px;
+        position: relative; 
+        padding-bottom: 2%;
+
+        @include bp(mobile) {
+            font-size: 26px;
+            padding-bottom: 7%;
+        }
+        
+
+        &:after {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            background: #CFB53B;
+        }
+    }
+
+    .all {
+        display: flex;
+        color: #CFB53B;
+        font-size: 14px;
+        align-items: center;
+
+        @include bp(mobile) {
+            display: none;
+        }
+
+
+        .all-text {
+         font-family:'Proxima Nova';   
+        }
+        
+        .icon {
+            display: flex;
+            align-self: center;
+        }
+        
+    }
+}
+
+.images {
+    display: flex;
+
+    @include bp(mobile) {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 33.3%;
+
+        @include bp(mobile) {
+            width: 100%;
+            margin-top: 15%;
+        }
+
+        .picture {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-position: center;
+                object-fit: contain;
+            }
+        }
+
+        .title {
+            margin: 5% 0;
+            font-weight: 600;
+        }
+
+        .author {
+            font-family:'Proxima Nova';
+            font-size: 11px;
+        }
+        
+    }
+
+    .middle {
+            margin: 0 2%;
+
+            @include bp(mobile) {
+                margin: 15% 0 0;
+            }
+        }
+
+        .all-down {
+            display: none;
+            color: #CFB53B;
+            font-size: 14px;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 10%;
+    
+            @include bp(mobile) {
+                display: flex;
+            }
+    
+    
+            .all-text {
+             font-family:'Proxima Nova';   
+            }
+            
+            .icon {
+                display: flex;
+                align-self: center;
+            }
+            
+        }
+}
+}
+
+.artist {
+    padding: 5% 4% 3%;
+    background: #FAFAFA;
+    display: flex;
+
+    @include bp(mobile) {
+        flex-direction: column;
+        padding: 10%;
+    }
+
+    .left {
+        width: 50%;
+
+        @include bp(mobile) {
+            width: 100%;
+        }
+
+        .heading {
+            font-size: 30px;
+            position: relative; 
+            padding-bottom: 2%;
+
+            @include bp(mobile) {
+                font-size: 20px;
+                width: 60%;
+                padding-bottom: 7%;
+            }
+    
+            &:after {
+                content: "";
+                position: absolute;
+                width: 39%;
+                height: 3px;
+                bottom: 0;
+                left: 0;
+                background: #CFB53B;
+
+                @include bp(mobile) {
+                    width: 100%;
+                }
+            }
+
+            
+        }
+
+        .author {
+                font-weight: 600;
+                font-size: 20px;
+                margin: 4% 0;
+
+                @include bp(mobile) {
+                    font-size: 16px;
+                    margin-top: 10%;
+                }
+            }
+
+            .description {
+                font-family:'Proxima Nova';
+                max-width: 60%;
+                line-height: 56px;
+
+                @include bp(mobile) {
+                    max-width: 100%;
+                    line-height: 40px;
+                }
+            }
+    }
+
+    .right {
+        width: 50%;
+        margin-top: 7%;
+
+        @include bp(mobile) {
+            width: 100%;
+        }
+
+        .image-div {
+            height: 100%;
+            width: 90%;
+
+            @include bp(mobile) {
+                width: 100%;
+            }
+
+            img {
+                height: 90%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+}
+
+

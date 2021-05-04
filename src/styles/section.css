@@ -1,0 +1,275 @@
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(../font/proxima.otf);
+}
+
+.section .artwork {
+  padding: 2% 4%;
+  padding-bottom: 7%;
+}
+
+.section .artwork .section-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3% 0;
+}
+
+.section .artwork .section-nav .heading {
+  font-size: 30px;
+  position: relative;
+  padding-bottom: 2%;
+}
+
+@media (max-width: 600px) {
+  .section .artwork .section-nav .heading {
+    font-size: 26px;
+    padding-bottom: 7%;
+  }
+}
+
+.section .artwork .section-nav .heading:after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: #CFB53B;
+}
+
+.section .artwork .section-nav .all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #CFB53B;
+  font-size: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 600px) {
+  .section .artwork .section-nav .all {
+    display: none;
+  }
+}
+
+.section .artwork .section-nav .all .all-text {
+  font-family: 'Proxima Nova';
+}
+
+.section .artwork .section-nav .all .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.section .artwork .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .section .artwork .images {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.section .artwork .images .card {
+  width: 33.3%;
+}
+
+@media (max-width: 600px) {
+  .section .artwork .images .card {
+    width: 100%;
+    margin-top: 15%;
+  }
+}
+
+.section .artwork .images .card .picture {
+  width: 100%;
+}
+
+.section .artwork .images .card .picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.section .artwork .images .card .title {
+  margin: 5% 0;
+  font-weight: 600;
+}
+
+.section .artwork .images .card .author {
+  font-family: 'Proxima Nova';
+  font-size: 11px;
+}
+
+.section .artwork .images .middle {
+  margin: 0 2%;
+}
+
+@media (max-width: 600px) {
+  .section .artwork .images .middle {
+    margin: 15% 0 0;
+  }
+}
+
+.section .artwork .images .all-down {
+  display: none;
+  color: #CFB53B;
+  font-size: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 10%;
+}
+
+@media (max-width: 600px) {
+  .section .artwork .images .all-down {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.section .artwork .images .all-down .all-text {
+  font-family: 'Proxima Nova';
+}
+
+.section .artwork .images .all-down .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.section .artist {
+  padding: 5% 4% 3%;
+  background: #FAFAFA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .section .artist {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10%;
+  }
+}
+
+.section .artist .left {
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .section .artist .left {
+    width: 100%;
+  }
+}
+
+.section .artist .left .heading {
+  font-size: 30px;
+  position: relative;
+  padding-bottom: 2%;
+}
+
+@media (max-width: 600px) {
+  .section .artist .left .heading {
+    font-size: 20px;
+    width: 60%;
+    padding-bottom: 7%;
+  }
+}
+
+.section .artist .left .heading:after {
+  content: "";
+  position: absolute;
+  width: 39%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: #CFB53B;
+}
+
+@media (max-width: 600px) {
+  .section .artist .left .heading:after {
+    width: 100%;
+  }
+}
+
+.section .artist .left .author {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 4% 0;
+}
+
+@media (max-width: 600px) {
+  .section .artist .left .author {
+    font-size: 16px;
+    margin-top: 10%;
+  }
+}
+
+.section .artist .left .description {
+  font-family: 'Proxima Nova';
+  max-width: 60%;
+  line-height: 56px;
+}
+
+@media (max-width: 600px) {
+  .section .artist .left .description {
+    max-width: 100%;
+    line-height: 40px;
+  }
+}
+
+.section .artist .right {
+  width: 50%;
+  margin-top: 7%;
+}
+
+@media (max-width: 600px) {
+  .section .artist .right {
+    width: 100%;
+  }
+}
+
+.section .artist .right .image-div {
+  height: 100%;
+  width: 90%;
+}
+
+@media (max-width: 600px) {
+  .section .artist .right .image-div {
+    width: 100%;
+  }
+}
+
+.section .artist .right .image-div img {
+  height: 90%;
+  width: 100%;
+}
+/*# sourceMappingURL=section.css.map */
