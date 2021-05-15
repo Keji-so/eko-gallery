@@ -2,6 +2,21 @@ import React from 'react'
 import '../styles/landing.scss';
 import { BiChevronRight } from "react-icons/bi";
 
+const artPaint = [
+    {
+        src: "./images/pic1.png"
+    },
+    {
+        src: "./images/pic2.png"
+    },
+    {
+        src: "./images/pic3.png"
+    },
+    {
+        src: "./images/pic4.png"
+    }
+]
+
 function Landing() {
     return (
         <div className="landing">
@@ -12,6 +27,14 @@ function Landing() {
                 <div className="landing-btn">
                     <div className="visit">Schedule a visit</div>
                     <div className="arrow">< BiChevronRight /></div>
+                </div>
+
+                <div className="mobile-img">
+                    <div className="img-container">
+                        {artPaint.map(({src}, i) => (
+                            <img className="image" key={i} src={src} alt=""/>
+                        ))}
+                    </div>
                 </div>
             </div>
 

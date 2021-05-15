@@ -9,8 +9,16 @@
 .footer {
     background: #1B1B1B;
     color: #FAFAFA;
-    display: flex;
     padding: 2% 4%;
+
+    @include bp(mobile) {
+        padding: 4% 10%;
+    }
+
+    
+
+.first {
+    display: flex;
 
     @include bp(mobile) {
         flex-direction: column;
@@ -18,14 +26,30 @@
 
     .left {
         width: 50%;
+
+        @include bp(mobile) {
+            width: 100%;
+        }
         
         .top {
             display: flex;
             padding: 3% 0;
             padding-right: 5%;
-            justify-content: space-between;
+
+            @include bp(mobile) {
+                flex-direction: column;
+                padding-right: none;
+            }
 
             .side {
+
+                width: 30%;
+
+                @include bp(mobile) {
+                    width: 50%;
+                }
+
+
 
                 .logo {
                     display: flex;
@@ -36,50 +60,80 @@
                     padding: 12px;
                     font-family:'Proxima Nova';
                     font-weight: light;
+                    width: 70%;
+
+                    
 
                     @include bp(mobile) {
                         font-size: 12px;
                         padding: 10px;
                     }
+
+                    @include bp(tablet) {
+                        font-size: 12px;
+                        width: 100%;
+                    }
+
+                    @include bp(desktop) {
+                        width: 90%;
+                    }
+
+
                 }
+            }
 
-                .center {
-                    margin: 20px 0;
+            .top-right {
+                 display: flex;
+                 width: 70%;
+                 justify-content: space-around;
+
+                 
+                 @include bp(mobile) {
+                    padding-top: 6%;
+                    padding-bottom: 3%;
+                    width: 100%;
+                    justify-content: space-around;
                 }
+                 
 
-                .option {
-                    opacity: 0.6;
-                    transition: all 0.3s ease;
-                    cursor: pointer;
+                .side {
 
-                    &:hover {
-                        opacity: 1;
+                    .center {
+                        margin: 20px 0;
+                    }
+    
+                    .option {
+                        opacity: 0.6;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+
+                        @include bp(mobile) {
+                            opacity: 1;
+                            font-size: 13px;
+                        }
+    
+                        &:hover {
+                            opacity: 1;
+                        }
                     }
                 }
             }
+
+      
         }
         
-        .bottom {
-            display: flex;
-            font-size: 10px;
-            align-items: center;
-
-            .text {
-                font-family:'Proxima Nova';
-                opacity: 0.8;
-            }
-
-            .icon {
-                display: flex;
-                 align-self: center;
-            }
-        }
+      
     }
 
+    
     .right {
         width: 50%;
         display: flex;
         padding: 1% 0;
+
+        @include bp(mobile) {
+            width: 100%;
+        }
 
         .icon {
             font-size: 24px;
@@ -90,6 +144,11 @@
                 &:hover {
                     opacity: 1;
                     } 
+
+                    @include bp(mobile) {
+                        opacity: 1;
+                        font-size: 20px;
+                    }        
         }
 
         .center {
@@ -97,6 +156,32 @@
             
 
            
+        }
+    }
+}
+
+
+    .bottom {
+        display: flex;
+        font-size: 10px;
+        align-items: center;
+
+        @include bp(mobile) {
+            margin-top: 10%;
+        }
+
+        @include bp(tablet) {
+            margin-top: 5%;
+        }
+
+        .text {
+            font-family:'Proxima Nova';
+            opacity: 0.8;
+        }
+
+        .icon {
+            display: flex;
+             align-self: center;
         }
     }
 }

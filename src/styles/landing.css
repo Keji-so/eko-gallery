@@ -32,6 +32,38 @@
   }
 }
 
+.landing .left .mobile-img {
+  display: none;
+  padding-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .landing .left .mobile-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.landing .left .mobile-img .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: auto;
+}
+
+.landing .left .mobile-img .img-container .image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 230px;
+  height: 250px;
+}
+
+.landing .left .mobile-img .img-container .image:not(:last-of-type) {
+  margin-right: 20px;
+}
+
 .landing .left .eko-logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +90,19 @@
   }
 }
 
+@media (max-width: 900px) {
+  .landing .left .eko-logo {
+    width: 40%;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing .left .eko-logo {
+    width: 40%;
+  }
+}
+
 .landing .left .welcome {
   font-size: 42px;
   line-height: 56px;
@@ -67,9 +112,25 @@
 
 @media (max-width: 600px) {
   .landing .left .welcome {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 32px;
+    line-height: 45px;
+    max-width: 92%;
     margin-top: 20%;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing .left .welcome {
+    font-size: 24px;
+    margin-top: 30%;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing .left .welcome {
+    font-size: 28px;
+    line-height: 45px;
   }
 }
 
@@ -85,15 +146,35 @@
           justify-content: center;
   background: #CFB53B;
   width: 60%;
-  height: 8%;
+  height: 7%;
   margin-top: 10%;
   cursor: pointer;
+  color: #fafafa;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 @media (max-width: 600px) {
   .landing .left .landing-btn {
-    padding: 5% 0;
+    height: 0;
   }
+}
+
+@media (max-width: 900px) {
+  .landing .left .landing-btn {
+    padding: 10% 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing .left .landing-btn {
+    height: 9%;
+  }
+}
+
+.landing .left .landing-btn:hover {
+  background: #fafafa;
+  color: #CFB53B;
 }
 
 .landing .left .landing-btn .arrow {
@@ -107,6 +188,12 @@
 
 .landing .left .landing-btn .visit {
   font-family: 'Proxima Nova';
+}
+
+@media (max-width: 900px) {
+  .landing .left .landing-btn {
+    font-size: 13px;
+  }
 }
 
 .landing .right {
@@ -146,6 +233,12 @@
   cursor: pointer;
 }
 
+@media (max-width: 900px) {
+  .landing .right .top ul li {
+    font-size: 12px;
+  }
+}
+
 .landing .right .top ul li:hover {
   color: #CFB53B;
 }
@@ -164,11 +257,14 @@
 
 @media (max-width: 600px) {
   .landing .right .bottom {
-    height: 50vh;
-    width: 400vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing .right .bottom {
+    padding: 5% 8%;
+    grid-gap: 10px;
   }
 }
 
@@ -176,36 +272,22 @@
   position: relative;
 }
 
-@media (max-width: 600px) {
-  .landing .right .bottom .pictures {
-    width: 100%;
-    height: 100%;
-  }
-}
-
-.landing .right .bottom .pictures img {
-  width: 100%;
-  height: 100%;
-  padding: 4%;
-}
-
-@media (max-width: 600px) {
-  .landing .right .bottom .pictures .pic4 {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-}
-
 .landing .right .bottom .pictures .pic1 {
   position: absolute;
   right: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .landing .right .bottom .pictures .pic1 {
-    top: 0;
-    left: 0;
+    max-width: 190px;
+    max-height: 190px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing .right .bottom .pictures .pic1 {
+    max-width: 250px;
+    max-height: 250px;
   }
 }
 
@@ -214,10 +296,17 @@
   right: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .landing .right .bottom .pictures .pic3 {
-    top: 0;
-    left: 0;
+    max-width: 140px;
+    max-height: 140px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing .right .bottom .pictures .pic3 {
+    max-width: 200px;
+    max-height: 200px;
   }
 }
 
@@ -226,10 +315,31 @@
   bottom: 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .landing .right .bottom .pictures .pic2 {
-    top: 0;
-    left: 0;
+    max-width: 140px;
+    max-height: 140px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing .right .bottom .pictures .pic2 {
+    max-width: 200px;
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .landing .right .bottom .pictures .pic4 {
+    max-width: 190px;
+    max-height: 190px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .landing .right .bottom .pictures .pic4 {
+    max-width: 250px;
+    max-height: 250px;
   }
 }
 /*# sourceMappingURL=landing.css.map */

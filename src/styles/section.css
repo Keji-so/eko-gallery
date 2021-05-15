@@ -8,6 +8,12 @@
   padding-bottom: 7%;
 }
 
+@media (max-width: 600px) {
+  .section .artwork {
+    padding: 10%;
+  }
+}
+
 .section .artwork .section-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,6 +56,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
@@ -220,6 +227,12 @@
   }
 }
 
+@media (max-width: 900px) {
+  .section .artist .left .heading:after {
+    width: 68%;
+  }
+}
+
 .section .artist .left .author {
   font-weight: 600;
   font-size: 20px;
@@ -230,6 +243,12 @@
   .section .artist .left .author {
     font-size: 16px;
     margin-top: 10%;
+  }
+}
+
+@media (max-width: 900px) {
+  .section .artist .left .author {
+    margin: 7% 0;
   }
 }
 
@@ -246,6 +265,19 @@
   }
 }
 
+@media (max-width: 900px) {
+  .section .artist .left .description {
+    max-width: 80%;
+    line-height: 35px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .section .artist .left .description {
+    line-height: 40px;
+  }
+}
+
 .section .artist .right {
   width: 50%;
   margin-top: 7%;
@@ -254,6 +286,12 @@
 @media (max-width: 600px) {
   .section .artist .right {
     width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .section .artist .right {
+    margin-top: 15%;
   }
 }
 

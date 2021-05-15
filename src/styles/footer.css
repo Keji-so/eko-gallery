@@ -6,14 +6,23 @@
 .footer {
   background: #1B1B1B;
   color: #FAFAFA;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 2% 4%;
 }
 
 @media (max-width: 600px) {
   .footer {
+    padding: 4% 10%;
+  }
+}
+
+.footer .first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (max-width: 600px) {
+  .footer .first {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -21,22 +30,45 @@
   }
 }
 
-.footer .left {
+.footer .first .left {
   width: 50%;
 }
 
-.footer .left .top {
+@media (max-width: 600px) {
+  .footer .first .left {
+    width: 100%;
+  }
+}
+
+.footer .first .left .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 3% 0;
   padding-right: 5%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.footer .left .top .side .logo {
+@media (max-width: 600px) {
+  .footer .first .left .top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-right: none;
+  }
+}
+
+.footer .first .left .top .side {
+  width: 30%;
+}
+
+@media (max-width: 600px) {
+  .footer .first .left .top .side {
+    width: 50%;
+  }
+}
+
+.footer .first .left .top .side .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,31 +83,108 @@
   padding: 12px;
   font-family: 'Proxima Nova';
   font-weight: light;
+  width: 70%;
 }
 
 @media (max-width: 600px) {
-  .footer .left .top .side .logo {
+  .footer .first .left .top .side .logo {
     font-size: 12px;
     padding: 10px;
   }
 }
 
-.footer .left .top .side .center {
+@media (max-width: 900px) {
+  .footer .first .left .top .side .logo {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer .first .left .top .side .logo {
+    width: 90%;
+  }
+}
+
+.footer .first .left .top .top-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 600px) {
+  .footer .first .left .top .top-right {
+    padding-top: 6%;
+    padding-bottom: 3%;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.footer .first .left .top .top-right .side .center {
   margin: 20px 0;
 }
 
-.footer .left .top .side .option {
+.footer .first .left .top .top-right .side .option {
   opacity: 0.6;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
-.footer .left .top .side .option:hover {
+@media (max-width: 600px) {
+  .footer .first .left .top .top-right .side .option {
+    opacity: 1;
+    font-size: 13px;
+  }
+}
+
+.footer .first .left .top .top-right .side .option:hover {
   opacity: 1;
 }
 
-.footer .left .bottom {
+.footer .first .right {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1% 0;
+}
+
+@media (max-width: 600px) {
+  .footer .first .right {
+    width: 100%;
+  }
+}
+
+.footer .first .right .icon {
+  font-size: 24px;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.footer .first .right .icon:hover {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .footer .first .right .icon {
+    opacity: 1;
+    font-size: 20px;
+  }
+}
+
+.footer .first .right .center {
+  margin: 0 10%;
+}
+
+.footer .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,40 +194,28 @@
           align-items: center;
 }
 
-.footer .left .bottom .text {
+@media (max-width: 600px) {
+  .footer .bottom {
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer .bottom {
+    margin-top: 5%;
+  }
+}
+
+.footer .bottom .text {
   font-family: 'Proxima Nova';
   opacity: 0.8;
 }
 
-.footer .left .bottom .icon {
+.footer .bottom .icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-item-align: center;
       align-self: center;
-}
-
-.footer .right {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 1% 0;
-}
-
-.footer .right .icon {
-  font-size: 24px;
-  opacity: 0.7;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.footer .right .icon:hover {
-  opacity: 1;
-}
-
-.footer .right .center {
-  margin: 0 10%;
 }
 /*# sourceMappingURL=footer.css.map */
