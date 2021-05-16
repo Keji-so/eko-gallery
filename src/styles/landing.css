@@ -139,6 +139,10 @@
   overflow: auto;
 }
 
+.landing .left .mobile-img .img-container::-webkit-scrollbar {
+  display: none;
+}
+
 .landing .left .mobile-img .img-container .image {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
