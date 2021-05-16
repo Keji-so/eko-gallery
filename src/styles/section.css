@@ -227,7 +227,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .section .artist .left .heading:after {
     width: 68%;
   }
@@ -246,7 +246,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .section .artist .left .author {
     margin: 7% 0;
   }
@@ -265,14 +265,14 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .section .artist .left .description {
     max-width: 80%;
     line-height: 35px;
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 901px) and (max-width: 1200px) {
   .section .artist .left .description {
     line-height: 40px;
   }
@@ -289,7 +289,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .section .artist .right {
     margin-top: 15%;
   }

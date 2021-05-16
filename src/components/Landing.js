@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../styles/landing.scss';
 import { BiChevronRight } from "react-icons/bi";
 
@@ -18,11 +18,42 @@ const artPaint = [
 ]
 
 function Landing() {
+
+const [drop, setDrop] = useState(false);
+
+const handleDrop = () => {
+    setDrop(!drop);
+}
+
+
     return (
         <div className="landing">
+
+            <div className={drop ? "active" : "dropdown"}>
+
+                <div className="close" onClick={handleDrop}>
+                        <div className="line first"></div>
+                        <div className="line second"></div>
+                </div>
+
+                <div className="content">
+                    <div className="links">Home</div>
+                    <div className="links">Exhibitions</div>
+                    <div className="links">Our Artists</div>
+                    <div className="links">Galleries</div>
+                    <div className="links">Partnerships</div>
+                </div>
+                
+            </div>
             
             <div className="left">
-                <div className="eko-logo">EKO Gallery</div>
+                <div className="nav">
+                    <div className="eko-logo">EKO Gallery</div>
+                    <div className="hamburger" onClick={handleDrop}>
+                        <div className="line"></div>
+                        <div className="line"></div>
+                    </div>
+                </div>
                 <div className=" welcome">Welcome to the Eko art gallery, we display some of the best artworks in Nigeria</div>
                 <div className="landing-btn">
                     <div className="visit">Schedule a visit</div>
@@ -51,16 +82,16 @@ function Landing() {
                 </div>
 
                 <div className="bottom">
-                        <div className="pictures">
+                        <div className="pictures1">
                             <img className="pic1" src="./images/pic1.png" alt=""/>
                         </div>
-                        <div className="pictures">
+                        <div className="pictures2">
                             <img className="pic2" src="./images/pic2.png" alt=""/>
                         </div>
-                        <div className="pictures">
+                        <div className="pictures3">
                             <img className="pic3" src="./images/pic3.png" alt=""/>
                         </div>
-                        <div className="pictures">
+                        <div className="pictures4">
                             <img className="pic4" src="./images/pic4.png" alt=""/>
                         </div>
                    

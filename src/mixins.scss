@@ -2,19 +2,20 @@
 // @include bp(tablet) {}
 // @include bp(desktop) {}
 
-@mixin bp($point) {
 
-    $mobile: "(max-width: 600px)";
-    $tablet: "(max-width: 900px)";
-    $desktop: "(max-width: 1200px)";
-      
-    @if $point == mobile {
-          @media #{$mobile} { @content; }
-        }
-          @else if $point == tablet {
-            @media #{$tablet} { @content; }
-        }
-          @else if $point == desktop {
-            @media #{$desktop} { @content; }
-        }
-    }
+    @mixin bp($point) {
+
+      $mobile: "(max-width: 600px)";
+      $tablet: "(min-width: 601px) and (max-width: 900px)";
+      $desktop: "(min-width: 901px) and (max-width: 1200px)";
+        
+      @if $point == mobile {
+            @media #{$mobile} { @content; }
+          }
+      @else if $point == tablet {
+              @media #{$tablet} { @content; }
+          }
+      @else if $point == desktop {
+              @media #{$desktop} { @content; }
+          }
+      }

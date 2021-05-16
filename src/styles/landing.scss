@@ -9,9 +9,82 @@
     background: #1B1B1B;
     display: flex;
     color: #FAFAFA;
+    z-index: 1;
 
     @include bp(mobile) {
         flex-direction: column;
+    }
+
+    .active {
+        z-index: 20;
+        position: absolute;
+        top: 0;
+        padding: 15% 10%;
+        transition: all 0.1s ease;
+        
+
+ 
+
+        @include bp(mobile) {
+            width: 100vw;
+            height: 100vh;
+            visibility: visible;
+            display: flex;
+            flex-direction: column;
+            background: #1B1B1B;
+            color: #fafafa;
+        }  
+
+        .close {
+            display: flex;
+            flex-direction: column;
+        
+
+        .line {
+            width: 18px;
+            height: 1px;
+            background: #ffffff;
+            margin: 5px 0;
+        }
+
+        .first {
+            transform: rotate(45deg) translateY(8px);
+            
+        }
+
+        .second {
+            transform: rotate(-45deg) translateY(-8px);
+           
+        }
+    }
+
+    .content {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 70vh;
+        padding: 15% 0;
+        font-size: 22px;
+
+        .links {
+
+            &:hover {
+                color: #CFB53B;
+            }
+        }
+    }
+    }
+
+    .dropdown {
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        transform: translateX(100%);
+        transition: all 0.1s ease;
+        
+
     }
 
 
@@ -48,32 +121,58 @@
             }
         }
 
-        .eko-logo {
+        .nav {
+
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            color:#ffffff;
-            border: 1px solid #ffffff;
-            padding: 12px;
-            width: 28%;
-            font-family:'Proxima Nova';
-            font-weight: light;
 
-            @include bp(mobile) {
-                font-size: 11px;
-                width: 30%;
-                padding: 10px 6px;
+            .eko-logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color:#ffffff;
+                border: 1px solid #ffffff;
+                padding: 12px;
+                width: 28%;
+                font-family:'Proxima Nova';
+                font-weight: light;
+    
+                @include bp(mobile) {
+                    font-size: 11px;
+                    width: 30%;
+                    padding: 10px 6px;
+                }
+    
+                @include bp(tablet) {
+                    width: 40%;
+                    font-size: 13px;
+                }
+    
+                @include bp(desktop) {
+                    width: 40%;
+                }
             }
 
-            @include bp(tablet) {
-                width: 40%;
-                font-size: 13px;
+            .hamburger {
+                display: none;
+                cursor: pointer;
+
+                @include bp(mobile) {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .line {
+                    width: 18px;
+                    height: 1px;
+                    background: #ffffff;
+                    margin: 5px 0;
+                }
             }
 
-            @include bp(desktop) {
-                width: 40%;
-            }
         }
+       
 
         .welcome {
             font-size: 42px;
@@ -116,7 +215,7 @@
             transition: all 0.3s ease-out;
 
             @include bp(mobile) {
-               height: 0;
+                padding: 5% 4%;
             }
 
             @include bp(tablet) {
@@ -200,17 +299,15 @@
            }
 
            @include bp(tablet) {
-            padding: 5% 8%;
+            padding: 5% 10%;
             grid-gap: 10px;
            }
            
 
-           .pictures {
+           .pictures1 {
                position: relative;
 
-            
-
-               .pic1 {
+             .pic1 {
                 position: absolute;
                 right: 0;
 
@@ -227,24 +324,14 @@
 
             }
 
-               .pic3 {
-                   position: absolute;
-                   right: 0;
+    
+            
+           }
 
-                   @include bp(tablet) {
-                    max-width: 140px;
-                    max-height: 140px;
-                }
+           .pictures2 {
+            position: relative;
 
-                @include bp(desktop) {
-                    max-width: 200px;
-                    max-height: 200px;
-                }
-
-                
-               }
-
-               .pic2 {
+            .pic2 {
                 position: absolute;
                 bottom: 0;
 
@@ -259,8 +346,36 @@
                 }
             }
 
+           }
+
+           .pictures3 {
+            position: relative;
+            
+
+            .pic3 {
+                position: absolute;
+                right: 0;
+
+                @include bp(tablet) {
+                 max-width: 140px;
+                 max-height: 140px;
+             }
+
+             @include bp(desktop) {
+                 max-width: 200px;
+                 max-height: 200px;
+             }
+
+             
+            }
+
+           }
+
+           .pictures4 {
+            position: relative;
+
             .pic4 {
-                
+                 
                 @include bp(tablet) {
                     max-width: 190px;
                     max-height: 190px;
@@ -272,7 +387,7 @@
                 }
 
             }
-            
+
            }
        }
 

@@ -93,14 +93,14 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .footer .first .left .top .side .logo {
     font-size: 12px;
     width: 100%;
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 901px) and (max-width: 1200px) {
   .footer .first .left .top .side .logo {
     width: 90%;
   }
@@ -200,7 +200,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 601px) and (max-width: 900px) {
   .footer .bottom {
     margin-top: 5%;
   }
