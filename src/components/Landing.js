@@ -26,6 +26,7 @@ const handleDrop = () => {
     setDrop(!drop);
 }
 
+
 useEffect(() => {
     imgAnim()
   }, [])
