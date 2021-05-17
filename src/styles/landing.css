@@ -232,6 +232,7 @@
 
 .landing .left .wel-con {
   overflow: hidden;
+  visibility: hidden;
 }
 
 .landing .left .wel-con .welcome {

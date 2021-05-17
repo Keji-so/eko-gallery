@@ -41,9 +41,13 @@ export const textAnim = () => {
     
     let text = document.querySelector(".welcome")
     let btnCon = document.querySelector(".land-con")
+    let welCon = document.querySelector(".wel-con")
     let button = document.querySelector(".landing-btn")
 
-    tl.from(text, {
+    tl.to(welCon, {
+        duration: 0,
+        css: {visibility: "visible"}
+      }).from(text, {
       duration: 1.5,
       x: -100,
       opacity: 0,
