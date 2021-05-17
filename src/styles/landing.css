@@ -266,7 +266,12 @@
   }
 }
 
-.landing .left .landing-btn {
+.landing .left .land-con {
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.landing .left .land-con .landing-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -277,39 +282,40 @@
       -ms-flex-pack: center;
           justify-content: center;
   background: #CFB53B;
-  width: 60%;
-  height: 7%;
+  width: 55%;
+  padding: 4% 0;
   margin-top: 10%;
   cursor: pointer;
   color: #fafafa;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  opacity: 1;
 }
 
 @media (max-width: 600px) {
-  .landing .left .landing-btn {
-    padding: 5% 4%;
+  .landing .left .land-con .landing-btn {
+    padding: 6% 0;
   }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-  .landing .left .landing-btn {
-    padding: 10% 0;
+  .landing .left .land-con .landing-btn {
+    padding: 6% 0;
   }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
-  .landing .left .landing-btn {
+  .landing .left .land-con .landing-btn {
     height: 9%;
   }
 }
 
-.landing .left .landing-btn:hover {
+.landing .left .land-con .landing-btn:hover {
   background: #fafafa;
   color: #CFB53B;
 }
 
-.landing .left .landing-btn .arrow {
+.landing .left .land-con .landing-btn .arrow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -318,12 +324,12 @@
   font-size: 17px;
 }
 
-.landing .left .landing-btn .visit {
+.landing .left .land-con .landing-btn .visit {
   font-family: 'Proxima Nova';
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-  .landing .left .landing-btn {
+  .landing .left .land-con .landing-btn {
     font-size: 13px;
   }
 }

@@ -211,49 +211,62 @@
 }
   }
 
-        .landing-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #CFB53B;
-            width: 60%;
-            height: 7%;
-            margin-top: 10%;
-            cursor: pointer;
-            color: #fafafa;
-            transition: all 0.3s ease-out;
 
-            @include bp(mobile) {
-                padding: 5% 4%;
-            }
+  .land-con {
+      visibility: hidden;
+      overflow: hidden;
 
-            @include bp(tablet) {
-                padding: 10% 0;
-            }
+    .landing-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #CFB53B;
+        width: 55%;
+        padding: 4% 0;
+        margin-top: 10%;
+        cursor: pointer;
+        color: #fafafa;
+        transition: all 0.3s ease-out;
+        opacity: 1;
 
-            @include bp(desktop) {
-                height: 9%;
-             }
-
-           &:hover {
-            background: #fafafa;
-            color: #CFB53B; 
-           }
-
-            .arrow {
-                display: flex;
-                align-self: center;
-                font-size: 17px;
-            }
-
-            .visit {
-                font-family:'Proxima Nova';
-            }
-
-            @include bp(tablet) {
-                font-size: 13px;
-            }
+        @include bp(mobile) {
+            padding: 6% 0;
         }
+
+        @include bp(tablet) {
+            padding: 6% 0;
+        }
+
+        @include bp(desktop) {
+            height: 9%;
+         }
+
+       &:hover {
+        background: #fafafa;
+        color: #CFB53B; 
+       }
+
+        .arrow {
+            display: flex;
+            align-self: center;
+            font-size: 17px;
+        }
+
+        .visit {
+            font-family:'Proxima Nova';
+        }
+
+        @include bp(tablet) {
+            font-size: 13px;
+        }
+    }
+
+  }
+
+ 
+
+  
+
     }
 
     .right {
@@ -448,6 +461,7 @@
             overflow: hidden;
             width: 100%;
             height: 100%;
+            
    
             .cover {
                position: absolute;

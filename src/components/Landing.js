@@ -67,10 +67,15 @@ useEffect(() => {
                 <div className="wel-con">
                 <div className="welcome">Welcome to the Eko art gallery, we display some of the best artworks in Nigeria</div>
                 </div>
-                <div className="landing-btn">
-                    <div className="visit">Schedule a visit</div>
-                    <div className="arrow">< BiChevronRight /></div>
+
+                <div className="land-con">
+                    <div className="landing-btn">
+                         <div className="visit">Schedule a visit</div>
+                         <div className="arrow">< BiChevronRight /></div>
+                    </div>
                 </div>
+                
+                
 
                 <div className="mobile-img">
                     <div className="img-container">

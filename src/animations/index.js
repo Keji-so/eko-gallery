@@ -40,6 +40,7 @@ export const textAnim = () => {
     let tl = gsap.timeline()
     
     let text = document.querySelector(".welcome")
+    let btnCon = document.querySelector(".land-con")
     let button = document.querySelector(".landing-btn")
 
     tl.from(text, {
@@ -48,7 +49,10 @@ export const textAnim = () => {
       opacity: 0,
       ease: "Expo.easeOut",
       delay: 0.5
-    }).from(button, {
+    }).to(btnCon, {
+        duration: 0,
+        css: {visibility: "visible"}
+      }).from(button, {
         duration: 0.5,
         x: -100,
         opacity: 0,
