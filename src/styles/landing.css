@@ -230,15 +230,20 @@
   margin: 5px 0;
 }
 
-.landing .left .welcome {
+.landing .left .wel-con {
+  overflow: hidden;
+}
+
+.landing .left .wel-con .welcome {
   font-size: 42px;
   line-height: 56px;
   max-width: 100%;
   margin-top: 35%;
+  opacity: 1;
 }
 
 @media (max-width: 600px) {
-  .landing .left .welcome {
+  .landing .left .wel-con .welcome {
     font-size: 32px;
     line-height: 45px;
     max-width: 92%;
@@ -247,7 +252,7 @@
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-  .landing .left .welcome {
+  .landing .left .wel-con .welcome {
     font-size: 24px;
     margin-top: 30%;
     line-height: 40px;
@@ -255,7 +260,7 @@
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
-  .landing .left .welcome {
+  .landing .left .wel-con .welcome {
     font-size: 28px;
     line-height: 45px;
   }
@@ -370,7 +375,7 @@
   color: #CFB53B;
 }
 
-.landing .right .bottom {
+#bottom {
   padding: 0 5%;
   padding-bottom: 5%;
   display: -ms-grid;
@@ -383,102 +388,168 @@
 }
 
 @media (max-width: 600px) {
-  .landing .right .bottom {
+  #bottom {
     display: none;
   }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-  .landing .right .bottom {
+  #bottom {
     padding: 5% 10%;
     grid-gap: 10px;
   }
 }
 
-.landing .right .bottom .pictures1 {
-  position: relative;
+#bottom .reveal-left {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
 }
 
-.landing .right .bottom .pictures1 .pic1 {
+#bottom .reveal-left .pictures1 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#bottom .reveal-left .pictures1 .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #1B1B1B;
+  z-index: 99;
+}
+
+#bottom .reveal-left .pictures1 .pic1 {
   position: absolute;
   right: 0;
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-  .landing .right .bottom .pictures1 .pic1 {
+  #bottom .reveal-left .pictures1 .pic1 {
     max-width: 190px;
     max-height: 190px;
   }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
-  .landing .right .bottom .pictures1 .pic1 {
+  #bottom .reveal-left .pictures1 .pic1 {
     max-width: 250px;
     max-height: 250px;
   }
 }
 
-.landing .right .bottom .pictures2 {
+#bottom .reveal-left .pictures4 {
   position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
-.landing .right .bottom .pictures2 .pic2 {
+#bottom .reveal-left .pictures4 .cover {
   position: absolute;
-  bottom: 0;
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-  .landing .right .bottom .pictures2 .pic2 {
-    max-width: 140px;
-    max-height: 140px;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1200px) {
-  .landing .right .bottom .pictures2 .pic2 {
-    max-width: 200px;
-    max-height: 200px;
-  }
-}
-
-.landing .right .bottom .pictures3 {
-  position: relative;
-}
-
-.landing .right .bottom .pictures3 .pic3 {
-  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
   right: 0;
+  background-color: #1B1B1B;
+  z-index: 99;
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-  .landing .right .bottom .pictures3 .pic3 {
-    max-width: 140px;
-    max-height: 140px;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1200px) {
-  .landing .right .bottom .pictures3 .pic3 {
-    max-width: 200px;
-    max-height: 200px;
-  }
-}
-
-.landing .right .bottom .pictures4 {
-  position: relative;
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-  .landing .right .bottom .pictures4 .pic4 {
+  #bottom .reveal-left .pictures4 .pic4 {
     max-width: 190px;
     max-height: 190px;
   }
 }
 
 @media (min-width: 901px) and (max-width: 1200px) {
-  .landing .right .bottom .pictures4 .pic4 {
+  #bottom .reveal-left .pictures4 .pic4 {
     max-width: 250px;
     max-height: 250px;
+  }
+}
+
+#bottom .reveal-right {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+#bottom .reveal-right .pictures2 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#bottom .reveal-right .pictures2 .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1B1B1B;
+  z-index: 99;
+}
+
+#bottom .reveal-right .pictures2 .pic2 {
+  position: absolute;
+  top: 80px;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  #bottom .reveal-right .pictures2 .pic2 {
+    max-width: 140px;
+    max-height: 140px;
+    top: 50px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  #bottom .reveal-right .pictures2 .pic2 {
+    max-width: 200px;
+    max-height: 200px;
+    top: 50px;
+  }
+}
+
+#bottom .reveal-right .pictures3 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+#bottom .reveal-right .pictures3 .cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #1B1B1B;
+  z-index: 99;
+}
+
+#bottom .reveal-right .pictures3 .pic3 {
+  position: absolute;
+  right: 0;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  #bottom .reveal-right .pictures3 .pic3 {
+    max-width: 140px;
+    max-height: 140px;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  #bottom .reveal-right .pictures3 .pic3 {
+    max-width: 200px;
+    max-height: 200px;
   }
 }
 /*# sourceMappingURL=landing.css.map */

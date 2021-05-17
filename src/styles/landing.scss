@@ -178,33 +178,38 @@
         }
        
 
-        .welcome {
-            font-size: 42px;
-            line-height: 56px;
-            max-width: 100%;
-            margin-top: 35%;
+  .wel-con {
+     overflow: hidden;
+
+    .welcome {
+        font-size: 42px;
+        line-height: 56px;
+        max-width: 100%;
+        margin-top: 35%;
+        opacity: 1;
 
 
-       @include bp(mobile) {
-        font-size: 32px;
-        line-height: 45px;
-        max-width: 92%;
-        margin-top: 20%;
-        
-       }
+   @include bp(mobile) {
+    font-size: 32px;
+    line-height: 45px;
+    max-width: 92%;
+    margin-top: 20%;
+    
+   }
 
-       @include bp(tablet) {
-        font-size: 24px;
-        margin-top: 30%; 
-        line-height: 40px;
-       }
+   @include bp(tablet) {
+    font-size: 24px;
+    margin-top: 30%; 
+    line-height: 40px;
+   }
 
-       @include bp(desktop) {
-        font-size: 28px;
-        line-height: 45px;
-     }
+   @include bp(desktop) {
+    font-size: 28px;
+    line-height: 45px;
+ }
 
-    }
+}
+  }
 
         .landing-btn {
             display: flex;
@@ -289,114 +294,195 @@
         }
 
 
-       .bottom {
-           padding: 0 5%;
-           padding-bottom: 5%;
-           display: grid;
-           grid-template-rows: 1fr 1fr;
-           grid-template-columns: 1fr 1fr;
-           grid-gap: 20px;
-
-
-           @include bp(mobile) {
-            display: none;
-           }
-
-           @include bp(tablet) {
-            padding: 5% 10%;
-            grid-gap: 10px;
-           }
-           
-
-           .pictures1 {
-               position: relative;
-
-             .pic1 {
-                position: absolute;
-                right: 0;
-
-                @include bp(tablet) {
-                    max-width: 190px;
-                    max-height: 190px;
-                    
-                }
-
-                @include bp(desktop) {
-                    max-width: 250px;
-                    max-height: 250px;
-                }
-
-            }
-
-    
-            
-           }
-
-           .pictures2 {
-            position: relative;
-
-            .pic2 {
-                position: absolute;
-                bottom: 0;
-
-                @include bp(tablet) {
-                    max-width: 140px;
-                    max-height: 140px;
-                }
-
-                @include bp(desktop) {
-                    max-width: 200px;
-                    max-height: 200px;
-                }
-            }
-
-           }
-
-           .pictures3 {
-            position: relative;
-            
-
-            .pic3 {
-                position: absolute;
-                right: 0;
-
-                @include bp(tablet) {
-                 max-width: 140px;
-                 max-height: 140px;
-             }
-
-             @include bp(desktop) {
-                 max-width: 200px;
-                 max-height: 200px;
-             }
-
-             
-            }
-
-           }
-
-           .pictures4 {
-            position: relative;
-
-            .pic4 {
-                 
-                @include bp(tablet) {
-                    max-width: 190px;
-                    max-height: 190px;
-                }
-
-                @include bp(desktop) {
-                    max-width: 250px;
-                    max-height: 250px;
-                }
-
-            }
-
-           }
-       }
 
        
 
     
 }
+}
+
+
+#bottom {
+    padding: 0 5%;
+    padding-bottom: 5%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+
+
+    @include bp(mobile) {
+     display: none;
+    }
+
+    @include bp(tablet) {
+     padding: 5% 10%;
+     grid-gap: 10px;
+    }
+
+    .reveal-left {
+     width: 100%;
+     height: 100%;
+     visibility: hidden;
+
+       
+
+     .pictures1 {
+         position: relative;
+         overflow: hidden;
+         width: 100%;
+         height: 100%;
+
+         .cover {
+            position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              right: 0;
+              background-color: #1B1B1B;
+              z-index: 99;
+        }
+
+
+
+       .pic1 {
+          position: absolute;
+          right: 0;
+
+          @include bp(tablet) {
+              max-width: 190px;
+              max-height: 190px;
+              
+          }
+
+          @include bp(desktop) {
+              max-width: 250px;
+              max-height: 250px;
+          }
+
+      }
+
+
+      
+     }
+
+     .pictures4 {
+        position: relative;
+        overflow: hidden;
+         width: 100%;
+         height: 100%;
+
+         .cover {
+            position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              right: 0;
+              background-color: #1B1B1B;
+              z-index: 99;
+        }
+  
+        .pic4 {
+             
+            @include bp(tablet) {
+                max-width: 190px;
+                max-height: 190px;
+            }
+  
+            @include bp(desktop) {
+                max-width: 250px;
+                max-height: 250px;
+            }
+  
+        }
+  
+       }
+
+   
+    }
+
+    
+    .reveal-right {
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+    
+        .pictures2 {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+   
+            .cover {
+               position: absolute;
+                 width: 100%;
+                 height: 100%;
+                 top: 0;
+                 left: 0;
+                 background-color: #1B1B1B;
+                 z-index: 99;
+           }
+   
+      
+            .pic2 {
+                position: absolute;
+                top: 80px;
+      
+                @include bp(tablet) {
+                    max-width: 140px;
+                    max-height: 140px;
+                    top: 50px;
+                }
+      
+                @include bp(desktop) {
+                    max-width: 200px;
+                    max-height: 200px;
+                    top: 50px;
+                }
+            }
+      
+           }
+
+           .pictures3 {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+   
+            .cover {
+               position: absolute;
+                 width: 100%;
+                 height: 100%;
+                 top: 0;
+                 left: 0;
+                 background-color: #1B1B1B;
+                 z-index: 99;
+           }
+   
+            
+      
+            .pic3 {
+                position: absolute;
+                right: 0;
+      
+                @include bp(tablet) {
+                 max-width: 140px;
+                 max-height: 140px;
+             }
+      
+             @include bp(desktop) {
+                 max-width: 200px;
+                 max-height: 200px;
+             }
+      
+             
+            }
+      
+           }
+    
+    }
+
+
+ 
+   
 }

@@ -1,6 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import '../styles/landing.scss';
 import { BiChevronRight } from "react-icons/bi";
+import { imgAnim, textAnim } from "../animations"
 
 const artPaint = [
     {
@@ -24,6 +25,14 @@ const [drop, setDrop] = useState(false);
 const handleDrop = () => {
     setDrop(!drop);
 }
+
+useEffect(() => {
+    imgAnim()
+  }, [])
+
+  useEffect(() => {
+    textAnim()
+  }, [])
 
 
     return (
@@ -54,7 +63,10 @@ const handleDrop = () => {
                         <div className="line"></div>
                     </div>
                 </div>
-                <div className=" welcome">Welcome to the Eko art gallery, we display some of the best artworks in Nigeria</div>
+
+                <div className="wel-con">
+                <div className="welcome">Welcome to the Eko art gallery, we display some of the best artworks in Nigeria</div>
+                </div>
                 <div className="landing-btn">
                     <div className="visit">Schedule a visit</div>
                     <div className="arrow">< BiChevronRight /></div>
@@ -81,22 +93,35 @@ const handleDrop = () => {
                     </ul>
                 </div>
 
-                <div className="bottom">
+                <div id="bottom">
+                    <div className="reveal-left">
                         <div className="pictures1">
-                            <img className="pic1" src="./images/pic1.png" alt=""/>
+                            <div className="cover"></div>
+                            <img className="pic1 pix" src="./images/pic1.png" alt=""/>
                         </div>
+                    </div>
+                        
+                    <div className="reveal-right">
                         <div className="pictures2">
-                            <img className="pic2" src="./images/pic2.png" alt=""/>
-                        </div>
-                        <div className="pictures3">
-                            <img className="pic3" src="./images/pic3.png" alt=""/>
-                        </div>
-                        <div className="pictures4">
-                            <img className="pic4" src="./images/pic4.png" alt=""/>
-                        </div>
-                   
+                            <div className="cover"></div>
+                            <img className="pic2 pix" src="./images/pic2.png" alt=""/>
+                        </div> 
+                    </div>
 
-                   
+                    <div className="reveal-right">
+                        <div className="pictures3">
+                        <div className="cover"></div>
+                            <img className="pic3 pix" src="./images/pic3.png" alt=""/>
+                        </div>
+                    </div>
+
+                    <div className="reveal-left">
+                        <div className="pictures4">
+                            <div className="cover"></div>
+                            <img className="pic4 pix" src="./images/pic4.png" alt=""/>
+                        </div>
+                    </div>
+                        
                 </div>
 
             </div>
